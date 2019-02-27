@@ -22,9 +22,13 @@
     short = price.value - (payLess * num.value);     // 100不足
     payMore = Math.ceil(price.value / num.value / unit.value) * unit.value;    // 400  小数点以下切上げ
     over = Math.abs(price.value - (payMore * num.value));        // 200余り
-    str =
-      '一人 ' + payLess + ' 円だと ' + short + ' 円足りません。' +
-      '一人 ' + payMore + ' 円だと ' + over + ' 円余ります。';
+    if (over === 0 && short === 0) {
+      str = '一人 ' + (price.value / num.value) + ' 円丁度です！';
+    } else {
+      str =
+        '一人 ' + payLess + ' 円だと ' + short + ' 円足りません。' +
+        '一人 ' + payMore + ' 円だと ' + over + ' 円余ります。';
+    }
     result.textContent = str;
   });
 })();
