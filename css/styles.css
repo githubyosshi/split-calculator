@@ -44,8 +44,24 @@ body {
   text-align: center;
   color: #fff;
 }
-
+/* <select>と<div>の間を改行による空白の文字溢れを解消 */
 .input-area {
   font-size: 0;
   margin-bottom: 20px;
+}
+
+.result-area {
+  background: #f8f8f8;
+  padding: 10px;
+  height: 130px;
+  border-radius: 5px;
+}
+
+#result {
+  margin: 0;
+}
+
+#reset {
+  text-decoration: underline;
+  cursor: pointer;
 }
