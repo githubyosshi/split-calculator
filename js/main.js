@@ -9,7 +9,15 @@
   var reset = document.getElementById('reset');
 
   function checkInput() {
-
+    // /^[1-9][0-9]*$/  正規表現1桁目1-9、2桁目0-9以降*
+    if (
+      price.value.match(/^[1-9][0-9]*$/) !== null &&
+      num.value.match(/^[1-9][0-9]*$/) !== null
+    ) {
+      btn.classList.remove('disabled');
+    } else {
+      btn.classList.add('disabled');
+    }
   }
 
   btn.addEventListener('click', function() {
