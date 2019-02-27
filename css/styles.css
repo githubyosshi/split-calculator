@@ -1,0 +1,32 @@
+body {
+  background: #ccc;
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  width: 500px;
+  margin: 25px auto;
+}
+
+/* フォームスタイルまとめて変更 */
+#price,
+#num,
+#unit {
+  font-size: 14px;
+  box-sizing: border-box;
+  padding: 10px;
+  height: 40px;
+  border-radius: 5px;  /* 角を丸く */
+  border: none;         /* ライン */
+  margin-right: 10px;
+}
+
+#price {
+  width: 140px;
+}
+
+#num,
+#unit {
+  width: 110px;
+}

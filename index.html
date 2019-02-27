@@ -3,7 +3,19 @@
 <head>
   <meta charset="utf-8">
   <title>割り勘電卓</title>
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+  <div class="container">  <!-- 電卓全体を画面中央に配置 -->
+    <div class="input-area">
+      <input type="text" id="price" placeholder="金額">
+      <input type="text" id="num" placeholder="人数">
+      <select id="unit">  <!-- 単位選択,初期値100円単位 -->
+        <option value="10">10円単位</option>
+        <option value="100" selected>100円単位</option>
+        <option value="1000">1000円単位</option>
+      </select>
+    </div>
+  </div>
 </body>
 </html>
