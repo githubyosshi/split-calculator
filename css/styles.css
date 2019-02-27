@@ -73,3 +73,7 @@ body {
 #btn.disabled {
   opacity: 0.5
 }
+
+#reset.hidden {
+  display: none;
+}

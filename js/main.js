@@ -45,8 +45,21 @@
         '一人 ' + payMore + ' 円だと ' + over + ' 円余ります。';
     }
     result.textContent = str;
+    reset.classList.remove('hidden');
   });
 
   price.addEventListener('keyup', checkInput);
   num.addEventListener('keyup', checkInput);
+
+  reset.addEventListener('click', function() {
+    result.textContent = 'ここに結果を表示します';
+    price.value = '';
+    num.value = '';
+    unit.value = 100;
+    btn.classList.add('disabled');
+    this.classList.add('hidden');
+    price.focus();
+  });
+
+  price.focus();
 })();
