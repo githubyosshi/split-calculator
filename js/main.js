@@ -8,12 +8,19 @@
   var result = document.getElementById('result');
   var reset = document.getElementById('reset');
 
+  function checkInput() {
+
+  }
+
   btn.addEventListener('click', function() {
     var payLess;
     var short;
     var payMore;
     var over;
     var str;            // 結果の文字列
+    if (this.classList.contains('disabled') === true) {
+      return;     // ボタンにdisabledが含まれていたら処理を実行しない
+    }
     // A. 300 (payLess) ... 100 (shart) 不足
     // B. 400 (payMore) ... 200 (over) 余り
     // payLess = 1000 / 3;        // 333.333...
@@ -31,4 +38,7 @@
     }
     result.textContent = str;
   });
+
+  price.addEventListener('keyup', checkInput);
+  num.addEventListener('keyup', checkInput);
 })();
